@@ -24,6 +24,11 @@ angular.module('app').config(function($routeProvider, $locationProvider){
         .when('/profile', { templateUrl: '/partials/account/profile',
             controller: 'mvProfileCtrl', resolve: routeRoleChecks.user
         })
+        .when('/entries', { templateUrl: '/partials/entries/entry-list',
+            controller: 'mvEntryListCtrl'})
+
+        .when('/entries/:id', { templateUrl: '/partials/entries/entry-details',
+            controller: 'mvEntryDetailCtrl'})
 });
 
 angular.module('app').run(function($rootScope, $location){
