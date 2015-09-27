@@ -1,0 +1,6 @@
+.panel.panel-primary
+   .panel-heading.text-center New Entries
+   .panel-body
+      .row(ng-repeat="entry in entries | orderBy:'published':true | limitTo:10")
+         .col-md-3 {{entry.published | date:'MMM d'}}
+         .col-md-9 {{entry.name}}

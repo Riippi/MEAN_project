@@ -1,0 +1,5 @@
+.panel.panel-primary
+    .panel-heading.text-center Featured Entries
+    .panel-body
+        .row(ng-repeat="entry in entries | filter:{featured:true}")
+            .col-md-12 {{entry.name}}

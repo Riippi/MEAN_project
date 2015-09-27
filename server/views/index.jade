@@ -1,7 +1,22 @@
 extends ../includes/layout
 
 block main-content
+   .navbar.navbar-inverse.navbar-fixed-top
+      .container
+         .navbar-header
+            a.navbar-brand(href="/") MEAN site!
+              // h6 -MEAN training log
+         .navbar-collapse.collapse
+            ul.nav.navbar-nav
+               li
+                  a(href="/") Home
+            div(ng-include="'/partials/account/navbar-login'")
+
    section.content
       div(ng-view)
-   h2= mongoMessage
+
+   footer.container.text-center
+       p Keywords #[a(href="https://nodejs.org") Node.js], #[a(href="https://angularjs.org/") Angular.js], #[a(href="http://expressjs.com/") Express.js], #[a(href="http://jade-lang.com/") Jade], #[a(href="https://www.mongodb.org/") MongoDB]
+       | This site is hosted in #[a(href="https://www.heroku.com/") Heroku] and  #[a(href="https://mongolab.com/") Mongolab]
+
 
