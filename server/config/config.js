@@ -8,7 +8,7 @@ module.exports = {
         port: process.env.PORT || 3030
     },
     production: {
-        db: 'mongodb://mean_user:extimean66667wowserKK@ds051843.mongolab.com:51843/mean_project',
+        db: '-insert path to the database in here-',
         rootPath: rootPath,
         port: process.env.PORT || 80
     }
